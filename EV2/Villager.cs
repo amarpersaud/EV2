@@ -7,21 +7,12 @@ namespace EV2
 {
     public class Villager : Creature
     {
-        
         public Occupation Occupation;
-
         
-        public Villager(Vector2 Position)
+        public Villager(Vector2 Position) : base()
         {
             this.Position = Position;
-            //this.Name = NameGenerator.GenerateName();
+
         }
-
-
-    }
-    public enum Gender
-    {
-        Male,
-        Female
     }
 }

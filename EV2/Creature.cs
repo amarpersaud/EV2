@@ -17,5 +17,12 @@ namespace EV2
         public int Age { get; set; }
         public Gender Gender { get; set; }
         public StatGroup StatGroup { get; set; }
+
+        public Creature()
+        {
+
+            IntentionQueue = new Queue<Intention>();
+            StatGroup = new StatGroup();
+        }
     }
 }
