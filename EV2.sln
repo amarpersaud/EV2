@@ -9,6 +9,7 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Monogame.CExtended", "Monog
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Monogame.CExtended\Monogame.CExtended.projitems*{2d775e44-ea04-40ce-8c20-417fb4826a8c}*SharedItemsImports = 5
 		Monogame.CExtended\Monogame.CExtended.projitems*{a0cdbd0e-3a41-42b7-9425-a838bc2c7383}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
