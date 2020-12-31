@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30709.64
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EV2", "EV2\EV2.csproj", "{2D775E44-EA04-40CE-8C20-417FB4826A8C}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Monogame.CExtended", "Monogame.CExtended\Monogame.CExtended.shproj", "{A0CDBD0E-3A41-42B7-9425-A838BC2C7383}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Monogame.CExtended\Monogame.CExtended.projitems*{a0cdbd0e-3a41-42b7-9425-a838bc2c7383}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2D775E44-EA04-40CE-8C20-417FB4826A8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D775E44-EA04-40CE-8C20-417FB4826A8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D775E44-EA04-40CE-8C20-417FB4826A8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D775E44-EA04-40CE-8C20-417FB4826A8C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ABC1252C-88FE-40B6-AC68-7518259511E2}
+	EndGlobalSection
+EndGlobal
