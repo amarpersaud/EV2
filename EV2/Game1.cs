@@ -1,6 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using MonoGame.CExtended;
+
 
 namespace EV2
 {
@@ -8,6 +10,9 @@ namespace EV2
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
+        private SpriteFont dfont;
+        private InputHelper ih = new InputHelper();
+        private FrameCounter fc = new FrameCounter();
 
         public Game1()
         {
@@ -18,8 +23,6 @@ namespace EV2
 
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
-
             base.Initialize();
         }
 
@@ -27,24 +30,34 @@ namespace EV2
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            // TODO: use this.Content to load your game content here
+            dfont = Content.Load<SpriteFont>("fonts/basicfont");
         }
 
         protected override void Update(GameTime gameTime)
         {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-                Exit();
+            ih.Update();
 
-            // TODO: Add your update logic here
+            if (ih.ExitRequested)
+            {
+                Exit();
+            }
 
             base.Update(gameTime);
         }
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            float deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-            // TODO: Add your drawing code here
+            fc.Update(deltaTime);
+
+            GraphicsDevice.Clear(Color.Black);
+
+            _spriteBatch.Begin();
+
+            _spriteBatch.DrawString(dfont, $"Avg {fc.AverageFramesPerSecond.ToString("f2")} Current {fc.CurrentFramesPerSecond.ToString("f2")}", new Vector2(20, 20), Color.White);
+
+            _spriteBatch.End();
 
             base.Draw(gameTime);
         }
